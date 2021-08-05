@@ -1,17 +1,17 @@
 variable "security_group_id" {
-  default = "sg-0cfa06fed7a4649c7"
+  default = "sg-0549ac06c788225ad"
 }
 
 variable "subnet_id" {
-  default = "subnet-02db31a87afc4dc31"
+  default = "subnet-3936c472"
 }
 
 variable "region" {
-  default = "eu-west-2"
+  default = "eu-west-1"
 }
 
 variable "UNIQUE_ANIMAL_IDENTIFIER" {
-  default = "playground"
+  default = "ponney"
 }
 variable "ARTIFACT" {
   
