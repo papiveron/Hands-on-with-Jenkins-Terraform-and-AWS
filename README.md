@@ -35,14 +35,14 @@ Anything in this directory will show up on your VS Code workstation.
 First and foremost, you all need your own forked repository so you all have your own individual repos you can commit to.
 
 ### 1. Fork the repository
-Go to the [react-app-devops-playground](https://github.com/DevOpsPlayground/Hands-on-with-Jenkins-Terraform-and-AWS) and click `fork`
+Go to the [react-app-devops-playground](https://github.com/papiveron/Hands-on-with-Jenkins-Terraform-and-AWS) and click `fork`
 
 ![](readme_images/fork.png)
 
 You can copy the url of the repository from the GitHub user interface like so:
 ![](readme_images/copy_url.png)
 
-Clone down your **forked** [react-app-devops-playground](https://github.com/DevOpsPlayground/Hands-on-with-Jenkins-Terraform-and-AWS)
+Clone down your **forked** [react-app-devops-playground](https://github.com/papiveron/Hands-on-with-Jenkins-Terraform-and-AWS)
 repository
 > note: remember to cd into `WorkDir` first if you are using the terminal we provided for you
 
@@ -162,7 +162,7 @@ the `parameters {}` block allows us to define any parameters we want our pipelin
 Here we are using the `definition {}` block to specify the Git repository. You will notice two variables that we will be passing into the seed job when we build it:
 
 - `GIT_USER`: this will be the credentials to your personal GitHub account so Jenkins can clone the repo (don't worry, we haven't configured this yet).
-- `GIT_URL`: this is the url of your forked [react-app-devops-playground](https://github.com/DevOpsPlayground/Hands-on-with-Jenkins-Terraform-and-AWS) repository.
+- `GIT_URL`: this is the url of your forked [react-app-devops-playground](https://github.com/papiveron/Hands-on-with-Jenkins-Terraform-and-AWS) repository.
 
 The `scriptPath('')` function defines the file path to the pipeline script that will be used to deploy our application. We'll come back onto this in Section 3
 
@@ -172,7 +172,7 @@ This `pipelineJob(){}` is creating a second pipeline that we will use to destoy 
 
 # How to commit and push to master?
 
-1. If you haven't already done so, clone down your **forked** [react-app-devops-playground](https://github.com/DevOpsPlayground/Hands-on-with-Jenkins-Terraform-and-AWS) repository and cd into it. 
+1. If you haven't already done so, clone down your **forked** [react-app-devops-playground](https://github.com/papiveron/Hands-on-with-Jenkins-Terraform-and-AWS) repository and cd into it. 
 > note: remember to cd into `WorkDir` first if you are using the terminal we provided for you
 
 Now run:
@@ -313,11 +313,11 @@ This will hold the Groovy code that will build our CI/CD pipeline.
 - Now we need to configure this pipeline:
     - Select **This project is parameterized** and add **TWO** string paramters by clicking **Add Parameter > String Parameter** ![](readme_images/parameterised.png)
     - Add the two variables we saw in Section 1, which were `GIT_USER` and `GIT_URL`. Leave **Default Value** and **Description** blank.
-    - In the **Source Code Management** section, select the **Git** radio button. Fill in **Repository URL** with your forked [react-app-devops-playground](https://github.com/DevOpsPlayground/Hands-on-with-Jenkins-Terraform-and-AWS) repository and **Credentials** with your credentials that we configured earlier. ![](readme_images/scm.png). Leave the branch as master.
+    - In the **Source Code Management** section, select the **Git** radio button. Fill in **Repository URL** with your forked [react-app-devops-playground](https://github.com/papiveron/Hands-on-with-Jenkins-Terraform-and-AWS) repository and **Credentials** with your credentials that we configured earlier. ![](readme_images/scm.png). Leave the branch as master.
     - Lastly, we need to add a build step. In the **Build** section, select **Add build step > Process Job DSLs**. Fill in the **DSL Scripts** section with the file path to our DSL script. The path is `jobs/DeployReactApp.groovy` and it will look like this: ![](readme_images/dsl_build_step.png)
     Click **Save** and the configuration is done!
 
-Before we move onto part three of this section, we need to fork the [react-app-devops-playground](https://github.com/DevOpsPlayground/Hands-on-with-Jenkins-Terraform-and-AWS) repository, which is the one that holds the application code we need to deploy.
+Before we move onto part three of this section, we need to fork the [react-app-devops-playground](https://github.com/papiveron/Hands-on-with-Jenkins-Terraform-and-AWS) repository, which is the one that holds the application code we need to deploy.
 
 So in the same way we forked the Jenkins DSL repository earlier, follow the link above and fork it to your personal GitHub. We will need the URL of this forked repository in just a moment...
 
@@ -329,7 +329,7 @@ Now go back to Jenkins so we can trigger a build to create our CI pipeline.
 ![](readme_images/build_with_params.png)
 - Fill in the fields like so:
     - `GIT_USER`: the username to your personal GitHub
-    - `GIT_URL`: the url of the *forked* [react-app-devops-playground](https://github.com/DevOpsPlayground/Hands-on-with-Jenkins-Terraform-and-AWS) repository. The image below shows how you can copy the url to your clipboard from the GitHub interface. ![](readme_images/copy_url.png)
+    - `GIT_URL`: the url of the *forked* [react-app-devops-playground](https://github.com/papiveron/Hands-on-with-Jenkins-Terraform-and-AWS) repository. The image below shows how you can copy the url to your clipboard from the GitHub interface. ![](readme_images/copy_url.png)
 - Select **Build**
 
 We should have a successful build. The most recent ball under **Build History** should be blue. If you click that ball you'll see the following message in the logs.
@@ -342,7 +342,7 @@ Finished: SUCCESS
 
 If you go the Jenkins homepage (you can always do this by clicking the large **Jenkins** icon at the top left of the user interface) you'll see our new pipeline `Deploy-React-App` which will have all the configuration we need.
 
-Now all we need to do is populate the `Jenkinsfile` and the `variables.tf` file in the forked [react-app-devops-playground](https://github.com/DevOpsPlayground/Hands-on-with-Jenkins-Terraform-and-AWS) repository, commit the code, and watch it deploy our application.
+Now all we need to do is populate the `Jenkinsfile` and the `variables.tf` file in the forked [react-app-devops-playground](https://github.com/papiveron/Hands-on-with-Jenkins-Terraform-and-AWS) repository, commit the code, and watch it deploy our application.
 
 Onto Section 3...
 
