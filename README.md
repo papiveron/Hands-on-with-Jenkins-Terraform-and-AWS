@@ -18,20 +18,7 @@ Still with me? Ok, lets get to it...
 If you don't already have a GitHub account then please sign up [here](https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home).
 
 We will be using one repository for this playground:
-1. The [react-app-devops-playground](https://github.com/DevOpsPlayground/Hands-on-with-Jenkins-Terraform-and-AWS) repository. This is the repository you're currently in, and it contains all the application code and scripts that we will need to actually deploy the web app to AWS.
-
-You will also have a Jenkins server that the playground team have spun up for you this evening...
-
-## Terminal and VS Code
-
-If you are using our provided workstations tonight, visit [this site](https://digital-meetup-signed-users.s3-eu-west-1.amazonaws.com/index.html) and type your **Meetup username** into the form. Then press submit and you should see
-1. **Username**
-2. **Password**
-3. **Terminal**: this is terminal we have spun up for you to run commands
-4. **IDE**: a workstation with VS Code installed to edit files
-5. **Jenkins**: the Jenkins instance you'll be using tonight
-
-![](readme_images/instance_details.png)
+1. The [react-app-devops-playground](https://github.com/papiveron/Hands-on-with-Jenkins-Terraform-and-AWS) repository. This is the repository you're currently in, and it contains all the application code and scripts that we will need to actually deploy the web app to AWS.
 
 > IMPORTANT: You'll need a unique animal identifier for tonight. You can find this prefixed on your **Terminal** and **IDE** urls. For example in the example above, my animal name would be **bengal**
 
